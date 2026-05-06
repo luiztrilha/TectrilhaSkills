@@ -10,6 +10,10 @@ Scope checked:
 - Superpowers workflow skills
 - MCP servers configured in the local Codex runtime
 - MCP servers registered in the DunderIA MCP catalog
+- Markdown files under the public local-runtime-profile snapshot
+- Claude plugin marketplace material
+- OpenCode/GitNexus skill references
+- prompt, command, and agent orientation files
 - public-safe Markdown patterns from the local environment
 
 ## Result
@@ -17,6 +21,13 @@ Scope checked:
 All known skills are represented in [`skills.md`](skills.md).
 
 All known MCP server families are represented in [`mcps.md`](mcps.md).
+
+The local-runtime-profile Markdown corpus is represented by:
+
+- [`skills.md`](skills.md), for active and snapshot-only skills
+- [`plugin-marketplaces.md`](plugin-marketplaces.md), for Claude/plugin marketplace material
+- [`prompts-and-commands.md`](prompts-and-commands.md), for command and prompt patterns
+- [`../docs/local-runtime-profile-absorption.md`](../docs/local-runtime-profile-absorption.md), for ingestion status
 
 Included as source example:
 
@@ -50,6 +61,20 @@ Public-safe patterns were promoted into:
 
 Private or machine-specific Markdown files were not copied wholesale. Their
 reusable policies were summarized instead.
+
+## Local Runtime Profile Snapshot Coverage
+
+Checked Markdown groups:
+
+| Group | Count | Treatment |
+|---|---:|---|
+| `claude-plugins` | 192 | cataloged and summarized as plugin marketplace patterns |
+| `superpowers` | 68 | active skills cataloged; extra plans/specs summarized as workflow references |
+| `agents-design` | 33 | active design skills cataloged |
+| `codex` | 32 | active skills, prompts, commands, and orientation summarized |
+| `root-or-index` | 13 | safety and boundary rules summarized |
+| `claude-commands` | 8 | cataloged as command wrappers |
+| `opencode` | 6 | cataloged as GitNexus/OpenCode references |
 
 ## Current Gap
 

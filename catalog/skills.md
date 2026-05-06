@@ -90,3 +90,54 @@ the source should be copied as a public example or kept as private/local-only.
 | `verification-before-completion` | `cataloged` | Verify evidence before claiming completion. |
 | `writing-plans` | `cataloged` | Produce implementation plans before touching code. |
 | `writing-skills` | `cataloged` | Create or edit skills and verify them before deployment. |
+
+## Snapshot-Only OpenCode Skills
+
+These were present in the public local-runtime-profile snapshot. They are
+cataloged as concepts, not active Codex skills.
+
+| Skill | Status | Public Guidance |
+|---|---|---|
+| `gitnexus-cli` | `reference-only` | CLI operations for indexed knowledge graph workflows. |
+| `gitnexus-debugging` | `reference-only` | Use knowledge graph context to trace bug causes. |
+| `gitnexus-exploring` | `reference-only` | Explore architecture and code relationships. |
+| `gitnexus-guide` | `reference-only` | Reference for GitNexus tools, resources, and graph schema. |
+| `gitnexus-impact-analysis` | `reference-only` | Analyze blast radius and change impact. |
+| `gitnexus-refactoring` | `reference-only` | Coordinate refactors using graph-backed context. |
+
+## Snapshot-Only Claude Plugin Skills
+
+These were present in the public local-runtime-profile snapshot through Claude
+plugin marketplaces. They are useful references for skill and plugin design.
+
+| Plugin | Skill | Status | Public Guidance |
+|---|---|---|---|
+| `claude-code-setup` | `claude-automation-recommender` | `reference-only` | Recommend automation components for a Claude setup. |
+| `claude-md-management` | `claude-md-improver` | `reference-only` | Improve agent instruction files. |
+| `example-plugin` | `example-command` | `reference-only` | Minimal command example. |
+| `example-plugin` | `example-skill` | `reference-only` | Minimal skill example. |
+| `frontend-design` | `frontend-design` | `reference-only` | Frontend design skill packaging reference. |
+| `hookify` | `writing-rules` | `reference-only` | Hook/rule authoring patterns. |
+| `math-olympiad` | `math-olympiad` | `reference-only` | Domain-specific reasoning skill reference. |
+| `mcp-server-dev` | `build-mcp-app` | `reference-only` | MCP app/widget development reference. |
+| `mcp-server-dev` | `build-mcp-server` | `reference-only` | MCP server development reference. |
+| `mcp-server-dev` | `build-mcpb` | `reference-only` | MCPB packaging reference. |
+| `playground` | `playground` | `reference-only` | Playground/template workflow reference. |
+| `plugin-dev` | `agent-development` | `reference-only` | Agent component development pattern. |
+| `plugin-dev` | `command-development` | `reference-only` | Command component development pattern. |
+| `plugin-dev` | `hook-development` | `reference-only` | Hook component development pattern. |
+| `plugin-dev` | `mcp-integration` | `reference-only` | MCP integration in plugins. |
+| `plugin-dev` | `plugin-settings` | `reference-only` | Plugin settings pattern. |
+| `plugin-dev` | `plugin-structure` | `reference-only` | Plugin manifest and directory structure. |
+| `plugin-dev` | `skill-development` | `reference-only` | Skill component development pattern. |
+| `session-report` | `session-report` | `reference-only` | Session reporting pattern. |
+| `skill-creator` | `skill-creator` | `reference-only` | Skill creation workflow. |
+| `discord` | `access` | `external-reference` | External service access pattern. |
+| `discord` | `configure` | `external-reference` | External service configuration pattern. |
+| `imessage` | `access` | `external-reference` | External service access pattern. |
+| `imessage` | `configure` | `external-reference` | External service configuration pattern. |
+| `telegram` | `access` | `external-reference` | External service access pattern. |
+| `telegram` | `configure` | `external-reference` | External service configuration pattern. |
+| `codex` | `codex-cli-runtime` | `reference-only` | Codex companion runtime routing reference. |
+| `codex` | `codex-result-handling` | `reference-only` | Codex result handling reference. |
+| `codex` | `gpt-5-4-prompting` | `reference-only` | Prompting guidance reference for Codex runs. |

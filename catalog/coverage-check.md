@@ -14,6 +14,8 @@ Scope checked:
 - Claude plugin marketplace material
 - OpenCode/GitNexus skill references
 - prompt, command, and agent orientation files
+- repo-local and workspace-level guidance files from a broad environment scan
+- repo-local skill folders and starter-kit skill folders
 - public-safe Markdown patterns from the local environment
 
 ## Result
@@ -28,6 +30,12 @@ The local-runtime-profile Markdown corpus is represented by:
 - [`plugin-marketplaces.md`](plugin-marketplaces.md), for Claude/plugin marketplace material
 - [`prompts-and-commands.md`](prompts-and-commands.md), for command and prompt patterns
 - [`../docs/local-runtime-profile-absorption.md`](../docs/local-runtime-profile-absorption.md), for ingestion status
+
+The broader environment scan is represented by:
+
+- [`environment-scan.md`](environment-scan.md), for public-safe findings
+- [`../docs/repository-guidance-patterns.md`](../docs/repository-guidance-patterns.md), for reusable repo guidance patterns
+- [`skills.md`](skills.md), for newly discovered skill families
 
 Included as source example:
 
@@ -75,6 +83,19 @@ Checked Markdown groups:
 | `root-or-index` | 13 | safety and boundary rules summarized |
 | `claude-commands` | 8 | cataloged as command wrappers |
 | `opencode` | 6 | cataloged as GitNexus/OpenCode references |
+
+## Broader Environment Scan Coverage
+
+Checked public-safe categories:
+
+| Category | Treatment |
+|---|---|
+| repo `AGENTS.md` and runtime instruction files | summarized as instruction precedence and repo bootstrap patterns |
+| `docs/agent-workspace/` folders | summarized as agent workspace bundle pattern |
+| workspace-level `docs/agent-harness/` material | summarized as operational harness pattern |
+| OpenSpec folders and skill family | cataloged as artifact-driven change workflow |
+| repo-local `.agents`, `.codex`, and `.claude` skills | cataloged when reusable; excluded when private |
+| design/performance rule packs | cataloged as reference-only rule packs |
 
 ## Current Gap
 

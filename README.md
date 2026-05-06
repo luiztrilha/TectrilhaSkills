@@ -187,12 +187,14 @@ privado de runtime.
 - [Limites de runtime profile](docs/runtime-profile-boundaries.md)
 - [Padrões de uso de MCP](docs/mcp-usage-patterns.md)
 - [Padrões de desenvolvimento de plugins](docs/plugin-development-patterns.md)
+- [Padrões de orientação por repositório](docs/repository-guidance-patterns.md)
 - [Absorção do local runtime profile](docs/local-runtime-profile-absorption.md)
 - [Receitas Windows PowerShell](docs/windows-powershell-recipes.md)
 - [Catálogo de skills](catalog/skills.md)
 - [Catálogo de MCPs](catalog/mcps.md)
 - [Catálogo de marketplaces de plugins](catalog/plugin-marketplaces.md)
 - [Catálogo de prompts e comandos](catalog/prompts-and-commands.md)
+- [Scan do ambiente](catalog/environment-scan.md)
 - [Checagem de cobertura](catalog/coverage-check.md)
 
 ## Limitações

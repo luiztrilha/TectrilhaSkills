@@ -141,3 +141,41 @@ plugin marketplaces. They are useful references for skill and plugin design.
 | `codex` | `codex-cli-runtime` | `reference-only` | Codex companion runtime routing reference. |
 | `codex` | `codex-result-handling` | `reference-only` | Codex result handling reference. |
 | `codex` | `gpt-5-4-prompting` | `reference-only` | Prompting guidance reference for Codex runs. |
+
+## Environment Scan Skill Candidates
+
+These skills were discovered outside the active global skill folders during a
+broader scan of repo-local and starter-kit material. They are cataloged here
+because their patterns are reusable.
+
+| Skill | Status | Public Guidance |
+|---|---|---|
+| `codex-review-loop` | `reference-only` | Adversarial Codex review flow with structured findings, human approval, atomic fixes, and re-review. |
+| `openai-docs` | `cataloged` | Official-docs-first workflow for OpenAI product and API questions. |
+| `project-conventions` | `reference-only` | Repo convention bundle pattern for typing, structure, testing, and review expectations. |
+| `vercel-composition-patterns` | `reference-only` | React composition rules for scalable component APIs and state boundaries. |
+| `vercel-react-best-practices` | `reference-only` | React/Next.js performance rule pack covering waterfalls, bundle size, server/client data, re-rendering, rendering, and JS performance. |
+| `web-design-guidelines` | `reference-only` | UI review checklist pattern for web interface compliance. |
+| `contribution-report` | `cataloged` | Maintainer-grade report pattern for PRs, branches, patches, or external system comparisons. |
+| `dunderia-doc-maintenance` | `project-specific-reference` | Documentation maintenance skill pattern for syncing public docs/manuals with product changes. |
+| `dunderia-plan-to-tasks` | `project-specific-reference` | Plan-to-task conversion pattern for turning strategy into executable agent lanes. |
+| `ui-dev` | `project-specific-reference` | Project-local UI development guide pattern for component APIs, modals, CSS variables, and renderer conventions. |
+
+## OpenSpec Workflow Skill Family
+
+The scan found a complete OpenSpec skill family. It is useful as a public
+artifact-driven change workflow reference.
+
+| Skill | Status | Public Guidance |
+|---|---|---|
+| `openspec-new-change` | `reference-only` | Start a structured change and stop after showing the first artifact template. |
+| `openspec-explore` | `reference-only` | Explore and shape an idea before writing change artifacts. |
+| `openspec-continue-change` | `reference-only` | Continue an existing change by creating the next ready artifact. |
+| `openspec-apply-change` | `reference-only` | Implement tasks from accepted change artifacts. |
+| `openspec-verify-change` | `reference-only` | Verify implementation against artifacts and requirements. |
+| `openspec-archive-change` | `reference-only` | Archive a completed change into durable specs. |
+| `openspec-bulk-archive-change` | `reference-only` | Archive multiple completed changes. |
+| `openspec-sync-specs` | `reference-only` | Sync delta specs from changes into canonical specs. |
+| `openspec-ff-change` | `reference-only` | Fast-forward artifact creation when explicitly requested. |
+| `openspec-onboard` | `reference-only` | Guided onboarding for OpenSpec workflow usage. |
+| `openspec-context-docs` | `reference-only` | Policy for where requirements and context docs belong in OpenSpec workflows. |

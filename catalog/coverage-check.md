@@ -8,11 +8,15 @@ Scope checked:
 - Codex system skills
 - Agents design skills
 - Superpowers workflow skills
+- MCP servers configured in the local Codex runtime
+- MCP servers registered in the DunderIA MCP catalog
 - public-safe Markdown patterns from the local environment
 
 ## Result
 
 All known skills are represented in [`skills.md`](skills.md).
+
+All known MCP server families are represented in [`mcps.md`](mcps.md).
 
 Included as source example:
 
@@ -39,6 +43,7 @@ Intentionally excluded from source promotion:
 Public-safe patterns were promoted into:
 
 - [`../docs/environment-usage-patterns.md`](../docs/environment-usage-patterns.md)
+- [`../docs/mcp-usage-patterns.md`](../docs/mcp-usage-patterns.md)
 - [`../docs/runtime-profile-boundaries.md`](../docs/runtime-profile-boundaries.md)
 - [`../docs/windows-powershell-recipes.md`](../docs/windows-powershell-recipes.md)
 - [`../AGENTS.md`](../AGENTS.md)

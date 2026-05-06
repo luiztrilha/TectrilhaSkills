@@ -6,6 +6,7 @@ inventory of any private machine.
 | File | Purpose |
 |---|---|
 | [`skills.md`](skills.md) | Complete public inventory of currently known Codex, Agents, and Superpowers skills. |
+| [`mcps.md`](mcps.md) | Public-safe catalog of MCP servers used or registered in the environment. |
 | [`caveman.md`](caveman.md) | Public notes for the `caveman` example skill. |
 | [`coverage-check.md`](coverage-check.md) | Latest coverage check against the local environment. |
 

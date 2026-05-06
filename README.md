@@ -47,8 +47,10 @@ public-safe pattern, not the private runtime artifact.
 - [Codex, Agents, and Superpowers](docs/codex-agents-superpowers.md)
 - [Environment usage patterns](docs/environment-usage-patterns.md)
 - [Runtime profile boundaries](docs/runtime-profile-boundaries.md)
+- [MCP usage patterns](docs/mcp-usage-patterns.md)
 - [Windows PowerShell recipes](docs/windows-powershell-recipes.md)
 - [Skill catalog](catalog/skills.md)
+- [MCP catalog](catalog/mcps.md)
 - [Coverage check](catalog/coverage-check.md)
 
 ## Relationship To DunderIA

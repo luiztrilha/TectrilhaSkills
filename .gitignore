@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.sqlite
+*.sqlite3
+*.db
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example

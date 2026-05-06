@@ -1,194 +1,212 @@
 # TectrilhaSkills
 
-Public guide for designing, reviewing, installing, and operating agent skills,
-MCPs, plugin patterns, prompts, commands, and reusable agent workflows.
+Guia público para projetar, revisar, instalar e operar skills de agentes,
+MCPs, padrões de plugins, prompts, comandos e fluxos reutilizáveis de agentes.
 
-This repository is a handbook, not a runtime snapshot. It explains reusable
-patterns for Codex, Agents, and Superpowers style skills without exposing local
-machine state, memories, sessions, secrets, broker state, or private project
-helpers.
+Este repositório é um manual, não um snapshot de runtime. Ele explica padrões
+reutilizáveis para skills no estilo Codex, Agents e Superpowers sem expor estado
+local da máquina, memórias, sessões, segredos, estado de broker ou helpers de
+projetos privados.
 
-## Contents
+## Conteúdo
 
-| Area | What It Contains |
+| Área | O Que Contém |
 |---|---|
-| `docs/` | Practical guidance for skills, MCPs, plugin development, runtime boundaries, safe commands, and environment patterns. |
-| `catalog/` | Public-safe inventories of skills, MCPs, plugin marketplaces, prompts, commands, examples, and coverage checks. |
-| `templates/` | Safe starter material for creating new public skills. |
-| `examples/` | Small public examples that can be copied or adapted after review. |
-| `AGENTS.md` | Repo-local operating rules for keeping this guide public-safe and current. |
-| `AGENT-USAGE.md` | Runtime-neutral instructions for Codex, Claude, Gemini, OpenCode, and other agents reading this repo. |
+| `docs/` | Guias práticos para skills, MCPs, desenvolvimento de plugins, limites de runtime, comandos seguros e padrões de ambiente. |
+| `catalog/` | Inventários publicamente seguros de skills, MCPs, marketplaces de plugins, prompts, comandos, exemplos e checagens de cobertura. |
+| `templates/` | Material inicial seguro para criar novas skills públicas. |
+| `examples/` | Pequenos exemplos públicos que podem ser copiados ou adaptados após revisão. |
+| `AGENTS.md` | Regras locais do repositório para manter este guia público, seguro e atualizado. |
+| `AGENT-USAGE.md` | Instruções neutras de runtime para Codex, Claude, Gemini, OpenCode e outros agentes que leem este repositório. |
 
-## Skills Covered
+## Skills Cobertas
 
-The skill catalog includes:
+O catálogo de skills inclui:
 
-- Codex system skills such as image generation, OpenAI docs, plugin creation,
-  skill creation, and skill installation.
-- Codex workflow skills for review, debugging, planning, document work, browser
-  automation, screenshots, security guidance, vetting, and verification.
-- Agents design skills for frontend design, layout, animation, typography,
-  critique, polish, responsive adaptation, performance, and UX writing.
-- Superpowers workflow skills for brainstorming, planning, TDD, systematic
-  debugging, code review, worktrees, verification, and subagent workflows.
-- Snapshot-only references for OpenCode/GitNexus and Claude plugin marketplace
-  skills.
+- Skills de sistema do Codex, como geração de imagem, documentação da OpenAI,
+  criação de plugins, criação de skills e instalação de skills.
+- Skills de workflow do Codex para revisão, debugging, planejamento, documentos,
+  automação de navegador, screenshots, orientação de segurança, vetting e
+  verificação.
+- Skills de design de Agents para frontend, layout, animação, tipografia,
+  crítica, polimento, adaptação responsiva, performance e escrita de UX.
+- Skills de workflow Superpowers para brainstorming, planejamento, TDD,
+  debugging sistemático, code review, worktrees, verificação e fluxos com
+  subagentes.
+- Referências presentes apenas no snapshot para OpenCode/GitNexus e skills de
+  marketplaces de plugins Claude.
 
-Main file: [`catalog/skills.md`](catalog/skills.md).
+Arquivo principal: [`catalog/skills.md`](catalog/skills.md).
 
-## MCPs Covered
+## MCPs Cobertos
 
-The MCP catalog documents public-safe usage patterns for:
+O catálogo de MCPs documenta padrões de uso publicamente seguros para:
 
-- `serena`: semantic code navigation and project-aware editing support.
-- `github`: repository, issue, pull request, code search, and file operations.
-- `playwright`: browser automation, screenshots, snapshots, forms, and console
-  debugging.
-- `filesystem`: scoped local file access through explicit allowlists.
-- `brave-search`: optional gated web search provider.
-- `megamemory`: per-repo memory database pattern, documented as private-state
-  reference only.
+- `serena`: navegação semântica de código e suporte de edição com contexto de
+  projeto.
+- `github`: operações de repositórios, issues, pull requests, busca de código e
+  arquivos.
+- `playwright`: automação de navegador, screenshots, snapshots, formulários e
+  debugging de console.
+- `filesystem`: acesso local a arquivos com escopos definidos por allowlists
+  explícitas.
+- `brave-search`: provedor opcional de busca web, ativado por configuração.
+- `megamemory`: padrão de banco de memória por repositório, documentado apenas
+  como referência de estado privado.
 
-Main files:
+Arquivos principais:
 
 - [`catalog/mcps.md`](catalog/mcps.md)
 - [`docs/mcp-usage-patterns.md`](docs/mcp-usage-patterns.md)
 
-## Plugin And Marketplace Patterns
+## Padrões De Plugins E Marketplaces
 
-The local-runtime-profile snapshot contained a large Claude/plugin marketplace
-corpus. This repo absorbs the public-safe parts as catalogs and patterns:
+O snapshot `local-runtime-profile` continha um grande corpus de marketplace
+Claude/plugins. Este repositório absorve as partes publicamente seguras como
+catálogos e padrões:
 
-- plugin directory structure and `.claude-plugin/plugin.json`
-- commands, agents, skills, hooks, scripts, and `.mcp.json`
-- MCP integration inside plugins
-- hook safety and publishing rules
-- Codex companion plugin command patterns
-- PR review, feature development, LSP, playground, and plugin-dev references
+- estrutura de diretórios de plugin e `.claude-plugin/plugin.json`
+- comandos, agentes, skills, hooks, scripts e `.mcp.json`
+- integração de MCP dentro de plugins
+- segurança de hooks e regras de publicação
+- padrões de comandos de plugin companion do Codex
+- referências de PR review, desenvolvimento de features, LSP, playground e
+  plugin-dev
 
-Main files:
+Arquivos principais:
 
 - [`catalog/plugin-marketplaces.md`](catalog/plugin-marketplaces.md)
 - [`catalog/prompts-and-commands.md`](catalog/prompts-and-commands.md)
 - [`docs/plugin-development-patterns.md`](docs/plugin-development-patterns.md)
 
-## Runtime Profile Absorption
+## Absorção Do Runtime Profile
 
-The public local-runtime-profile snapshot had hundreds of Markdown files. They
-were not copied wholesale. They were grouped, reviewed, and represented as
-public-safe catalogs and reusable patterns.
+O snapshot público `local-runtime-profile` tinha centenas de arquivos Markdown.
+Eles não foram copiados em massa. Foram agrupados, revisados e representados
+como catálogos publicamente seguros e padrões reutilizáveis.
 
-Current absorbed groups:
+Grupos absorvidos atualmente:
 
-| Group | Treatment |
+| Grupo | Tratamento |
 |---|---|
-| Codex skills and prompts | Cataloged and summarized. |
-| Agents design skills | Cataloged. |
-| Superpowers skills, plans, specs, and commands | Cataloged and summarized as workflow patterns. |
-| Claude plugin marketplace material | Cataloged and summarized as plugin patterns. |
-| OpenCode/GitNexus skills | Cataloged as reference-only. |
-| Root profile guidance and exclusions | Summarized as runtime boundary rules. |
+| Skills e prompts Codex | Catalogados e resumidos. |
+| Skills de design Agents | Catalogadas. |
+| Skills, planos, specs e comandos Superpowers | Catalogados e resumidos como padrões de workflow. |
+| Material de marketplace de plugins Claude | Catalogado e resumido como padrões de plugins. |
+| Skills OpenCode/GitNexus | Catalogadas como referência. |
+| Orientação e exclusões da raiz do profile | Resumidas como regras de limite de runtime. |
 
-Main file: [`docs/local-runtime-profile-absorption.md`](docs/local-runtime-profile-absorption.md).
+Arquivo principal: [`docs/local-runtime-profile-absorption.md`](docs/local-runtime-profile-absorption.md).
 
-## Standards And Patterns
+## Padrões E Regras
 
-The guide captures reusable operating standards:
+O guia captura padrões operacionais reutilizáveis:
 
-- use skills only when the task matches their trigger
-- prefer narrow skills over broad bundles
-- keep repo-local overrides only when they change behavior
-- verify before claiming completion
-- use raw command output for operational decisions unless a summarizer is
-  explicitly requested
-- do not use `distill` automatically
-- keep MCP allowlists narrow
-- treat browser automation and filesystem writes as sensitive capabilities
-- promote public-safe patterns, not private runtime artifacts
+- usar skills apenas quando a tarefa corresponder ao gatilho delas
+- preferir skills estreitas em vez de pacotes amplos
+- manter overrides locais de repositório apenas quando eles mudarem comportamento
+- verificar antes de afirmar conclusão
+- usar saída bruta de comandos para decisões operacionais, a menos que um
+  sumarizador seja explicitamente solicitado
+- não usar `distill` automaticamente
+- manter allowlists de MCP estreitas
+- tratar automação de navegador e escrita no filesystem como capacidades
+  sensíveis
+- promover padrões publicamente seguros, não artefatos privados de runtime
 
-Main files:
+Arquivos principais:
 
 - [`docs/environment-usage-patterns.md`](docs/environment-usage-patterns.md)
 - [`docs/runtime-profile-boundaries.md`](docs/runtime-profile-boundaries.md)
 - [`docs/windows-powershell-recipes.md`](docs/windows-powershell-recipes.md)
 
-## Safety Model
+## Modelo De Segurança
 
-This repo is intentionally public-safe. It documents how to use and design
-skills/MCPs without publishing the user's private runtime.
+Este repositório é intencionalmente seguro para publicação. Ele documenta como
+usar e projetar skills/MCPs sem publicar o runtime privado do usuário.
 
-This repo must not contain:
+Este repositório não deve conter:
 
-- tokens, credentials, OAuth state, browser profiles, or raw config files
-- runtime memories, session logs, shell history, telemetry, or local databases
-- private project helpers, database scripts, company state, or broker state
-- machine-specific paths that only work on one workstation
-- broad exports of a live runtime profile
+- tokens, credenciais, estado OAuth, perfis de navegador ou arquivos de config
+  crus
+- memórias de runtime, logs de sessão, histórico de shell, telemetria ou bancos
+  locais
+- helpers de projetos privados, scripts de banco, estado de empresa ou estado
+  de broker
+- caminhos específicos de uma máquina
+- exportações amplas de um runtime vivo
 
-Some items are intentionally cataloged but not copied:
+Alguns itens são intencionalmente catalogados, mas não copiados:
 
-- private database helpers
-- local memory databases
-- raw MCP or Codex config
-- third-party plugin source trees that need separate license/safety review
-- historical plans/specs that are useful as references but not as active rules
+- helpers privados de banco de dados
+- bancos locais de memória
+- config crua de MCP ou Codex
+- árvores de código de plugins de terceiros que precisam de revisão separada de
+  licença e segurança
+- planos/specs históricos úteis como referência, mas não como regras ativas
 
-## Recommended Workflow
+## Workflow Recomendado
 
-1. Decide whether the behavior belongs in a skill, a repo rule, or normal docs.
-2. Draft the skill with a narrow trigger and a clear output contract.
-3. Vet the files for secrets, local paths, and risky commands.
-4. Test the skill in a disposable local runtime or a small repo fixture.
-5. Promote only the reusable parts.
+1. Decida se o comportamento pertence a uma skill, regra de repositório ou
+   documentação normal.
+2. Escreva a skill com um gatilho estreito e um contrato de saída claro.
+3. Faça vetting dos arquivos em busca de segredos, caminhos locais e comandos de
+   risco.
+4. Teste a skill em um runtime local descartável ou em um pequeno fixture de
+   repositório.
+5. Promova apenas as partes reutilizáveis.
 
-## Maintenance Workflow
+## Workflow De Manutenção
 
-When a new skill, MCP, prompt, command, plugin pattern, or environment rule is
-added locally:
+Quando uma nova skill, MCP, prompt, comando, padrão de plugin ou regra de
+ambiente for adicionada localmente:
 
-1. Decide whether it is public-safe.
-2. Add it to the matching catalog.
-3. Promote reusable behavior into a guide under `docs/`.
-4. Mark private or stateful items as `reference-only` or `excluded-private`.
-5. Run formatting and secret/path checks before publishing.
+1. Decida se ela é segura para publicação.
+2. Adicione ao catálogo correspondente.
+3. Promova o comportamento reutilizável para um guia em `docs/`.
+4. Marque itens privados ou com estado como `reference-only` ou
+   `excluded-private`.
+5. Rode checagens de formatação, segredos e paths antes de publicar.
 
-## Update Rule
+## Regra De Atualização
 
-Keep this repository current whenever reusable skill knowledge changes in a
-public repo or in the global Codex/Agents/Superpowers environment. Promote the
-public-safe pattern, not the private runtime artifact.
+Mantenha este repositório atualizado sempre que conhecimento reutilizável sobre
+skills mudar em um repositório público ou no ambiente global
+Codex/Agents/Superpowers. Promova o padrão publicamente seguro, não o artefato
+privado de runtime.
 
-## Start Here
+## Comece Aqui
 
-- [Agent usage guide](AGENT-USAGE.md)
-- [Skill anatomy](docs/skill-anatomy.md)
-- [Installing skills](docs/installing-skills.md)
-- [Creating public skills](docs/creating-public-skills.md)
-- [Vetting skills](docs/vetting-skills.md)
-- [Codex, Agents, and Superpowers](docs/codex-agents-superpowers.md)
-- [Environment usage patterns](docs/environment-usage-patterns.md)
-- [Runtime profile boundaries](docs/runtime-profile-boundaries.md)
-- [MCP usage patterns](docs/mcp-usage-patterns.md)
-- [Plugin development patterns](docs/plugin-development-patterns.md)
-- [Local runtime profile absorption](docs/local-runtime-profile-absorption.md)
-- [Windows PowerShell recipes](docs/windows-powershell-recipes.md)
-- [Skill catalog](catalog/skills.md)
-- [MCP catalog](catalog/mcps.md)
-- [Plugin marketplace catalog](catalog/plugin-marketplaces.md)
-- [Prompt and command catalog](catalog/prompts-and-commands.md)
-- [Coverage check](catalog/coverage-check.md)
+- [Guia de uso para agentes](AGENT-USAGE.md)
+- [Anatomia de skill](docs/skill-anatomy.md)
+- [Instalação de skills](docs/installing-skills.md)
+- [Criação de skills públicas](docs/creating-public-skills.md)
+- [Vetting de skills](docs/vetting-skills.md)
+- [Codex, Agents e Superpowers](docs/codex-agents-superpowers.md)
+- [Padrões de uso do ambiente](docs/environment-usage-patterns.md)
+- [Limites de runtime profile](docs/runtime-profile-boundaries.md)
+- [Padrões de uso de MCP](docs/mcp-usage-patterns.md)
+- [Padrões de desenvolvimento de plugins](docs/plugin-development-patterns.md)
+- [Absorção do local runtime profile](docs/local-runtime-profile-absorption.md)
+- [Receitas Windows PowerShell](docs/windows-powershell-recipes.md)
+- [Catálogo de skills](catalog/skills.md)
+- [Catálogo de MCPs](catalog/mcps.md)
+- [Catálogo de marketplaces de plugins](catalog/plugin-marketplaces.md)
+- [Catálogo de prompts e comandos](catalog/prompts-and-commands.md)
+- [Checagem de cobertura](catalog/coverage-check.md)
 
-## Limitations
+## Limitações
 
-- This is not an installable runtime profile.
-- It does not guarantee that a skill or MCP is installed on any machine.
-- It does not include secrets, state, private paths, or local databases.
-- It catalogs some upstream/plugin material as reference-only instead of
-  vendoring the source.
-- It favors durable public guidance over exact private-machine reproduction.
+- Este não é um runtime profile instalável.
+- Ele não garante que uma skill ou MCP esteja instalado em qualquer máquina.
+- Ele não inclui segredos, estado, paths privados ou bancos locais.
+- Ele cataloga parte do material upstream/plugin como `reference-only`, em vez
+  de versionar a fonte.
+- Ele prioriza orientação pública durável em vez de reprodução exata de uma
+  máquina privada.
 
-## Relationship To DunderIA
+## Relação Com DunderIA
 
-`dunderia-public-export` can point here for reusable skill guidance. Runtime
-profile snapshots should stay small and sanitized; this repository carries the
-long-form guidance instead.
+`dunderia-public-export` pode apontar para este repositório como guia
+reutilizável de skills. Snapshots de runtime profile devem permanecer pequenos e
+sanitizados; este repositório carrega a orientação longa.

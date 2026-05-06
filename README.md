@@ -45,7 +45,11 @@ public-safe pattern, not the private runtime artifact.
 - [Creating public skills](docs/creating-public-skills.md)
 - [Vetting skills](docs/vetting-skills.md)
 - [Codex, Agents, and Superpowers](docs/codex-agents-superpowers.md)
+- [Environment usage patterns](docs/environment-usage-patterns.md)
+- [Runtime profile boundaries](docs/runtime-profile-boundaries.md)
 - [Windows PowerShell recipes](docs/windows-powershell-recipes.md)
+- [Skill catalog](catalog/skills.md)
+- [Coverage check](catalog/coverage-check.md)
 
 ## Relationship To DunderIA
 

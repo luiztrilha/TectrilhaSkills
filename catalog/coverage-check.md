@@ -1,6 +1,6 @@
 # Coverage Check
 
-Last checked: 2026-05-06.
+Last checked: 2026-05-07.
 
 Scope checked:
 
@@ -17,6 +17,7 @@ Scope checked:
 - repo-local and workspace-level guidance files from a broad environment scan
 - repo-local skill folders and starter-kit skill folders
 - public-safe Markdown patterns from the local environment
+- external agent-forward repository template patterns
 
 ## Result
 
@@ -35,6 +36,7 @@ The broader environment scan is represented by:
 
 - [`environment-scan.md`](environment-scan.md), for public-safe findings
 - [`../docs/repository-guidance-patterns.md`](../docs/repository-guidance-patterns.md), for reusable repo guidance patterns
+- [`repository-templates.md`](repository-templates.md), for public-safe starter template patterns
 - [`skills.md`](skills.md), for newly discovered skill families
 
 Included as source example:
@@ -61,6 +63,7 @@ Intentionally excluded from source promotion:
 
 Public-safe patterns were promoted into:
 
+- [`../docs/agent-forward-repository-template.md`](../docs/agent-forward-repository-template.md)
 - [`../docs/environment-usage-patterns.md`](../docs/environment-usage-patterns.md)
 - [`../docs/mcp-usage-patterns.md`](../docs/mcp-usage-patterns.md)
 - [`../docs/runtime-profile-boundaries.md`](../docs/runtime-profile-boundaries.md)
@@ -96,6 +99,7 @@ Checked public-safe categories:
 | OpenSpec folders and skill family | cataloged as artifact-driven change workflow |
 | repo-local `.agents`, `.codex`, and `.claude` skills | cataloged when reusable; excluded when private |
 | design/performance rule packs | cataloged as reference-only rule packs |
+| external `codex-repo-template` style repos | summarized as agent-forward repository starter guidance; unsafe runtime config excluded |
 
 ## Current Gap
 

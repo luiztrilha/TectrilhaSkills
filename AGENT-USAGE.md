@@ -47,6 +47,12 @@ For plugin work:
 2. [`docs/plugin-development-patterns.md`](docs/plugin-development-patterns.md)
 3. [`catalog/prompts-and-commands.md`](catalog/prompts-and-commands.md)
 
+For new repo bootstrap or agent-forward repo organization:
+
+1. [`docs/agent-forward-repository-template.md`](docs/agent-forward-repository-template.md)
+2. [`templates/repository-guidance/`](templates/repository-guidance/)
+3. [`catalog/repository-templates.md`](catalog/repository-templates.md)
+
 ## Codex
 
 Use this repository as a public guidance source for:
@@ -120,6 +126,7 @@ Agents may copy or adapt:
 - sanitized MCP config shapes
 - plugin structure guidance
 - public-safe workflow patterns
+- repository guidance templates after replacing placeholders
 
 ## What Agents Must Not Copy
 
@@ -134,6 +141,8 @@ Agents must not copy:
 - browser profiles
 - broker or company state
 - customer/project-specific operational procedures
+- external `.codex/config.toml` files that weaken approval, sandbox or network
+  policy
 
 ## When Updating This Repo
 

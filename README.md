@@ -14,7 +14,7 @@ projetos privados.
 |---|---|
 | `docs/` | Guias práticos para skills, MCPs, desenvolvimento de plugins, limites de runtime, comandos seguros e padrões de ambiente. |
 | `catalog/` | Inventários publicamente seguros de skills, MCPs, marketplaces de plugins, prompts, comandos, exemplos e checagens de cobertura. |
-| `templates/` | Material inicial seguro para criar novas skills públicas. |
+| `templates/` | Material inicial seguro para criar novas skills públicas e orientar novos repositórios agent-forward. |
 | `examples/` | Pequenos exemplos públicos que podem ser copiados ou adaptados após revisão. |
 | `AGENTS.md` | Regras locais do repositório para manter este guia público, seguro e atualizado. |
 | `AGENT-USAGE.md` | Instruções neutras de runtime para Codex, Claude, Gemini, OpenCode e outros agentes que leem este repositório. |
@@ -78,6 +78,29 @@ Arquivos principais:
 - [`catalog/plugin-marketplaces.md`](catalog/plugin-marketplaces.md)
 - [`catalog/prompts-and-commands.md`](catalog/prompts-and-commands.md)
 - [`docs/plugin-development-patterns.md`](docs/plugin-development-patterns.md)
+
+## Templates De Repositório Agent-Forward
+
+Este repositório também documenta como iniciar ou reorganizar projetos para que
+humanos e agentes trabalhem com contexto versionado, planos claros e validação
+explícita.
+
+Padrão absorvido seletivamente de templates externos, sem copiar configs de
+runtime arriscadas:
+
+- documentos raiz: `AGENTS.md`, `PRODUCT.md`, `ROADMAP.md`, `ARCHITECTURE.md`,
+  `DESIGN.md`, `CODESTYLE.md` e `PLANS.md`
+- planos executáveis para mudanças amplas
+- QA visual com evidência quando UI muda
+- vetting antes de copiar skills, scripts ou configs de terceiros
+- rejeição padrão de configs como `approval_policy = "never"` e
+  `sandbox_mode = "danger-full-access"`
+
+Arquivos principais:
+
+- [`docs/agent-forward-repository-template.md`](docs/agent-forward-repository-template.md)
+- [`catalog/repository-templates.md`](catalog/repository-templates.md)
+- [`templates/repository-guidance/`](templates/repository-guidance/)
 
 ## Absorção Do Runtime Profile
 
@@ -164,7 +187,7 @@ ambiente for adicionada localmente:
 1. Decida se ela é segura para publicação.
 2. Adicione ao catálogo correspondente.
 3. Promova o comportamento reutilizável para um guia em `docs/`.
-4. Marque itens privados ou com estado como `reference-only` ou
+4. Marque itens privados, externos sem vetting completo ou com estado como `reference-only` ou
    `excluded-private`.
 5. Rode checagens de formatação, segredos e paths antes de publicar.
 
@@ -188,11 +211,13 @@ privado de runtime.
 - [Padrões de uso de MCP](docs/mcp-usage-patterns.md)
 - [Padrões de desenvolvimento de plugins](docs/plugin-development-patterns.md)
 - [Padrões de orientação por repositório](docs/repository-guidance-patterns.md)
+- [Template de repositório agent-forward](docs/agent-forward-repository-template.md)
 - [Absorção do local runtime profile](docs/local-runtime-profile-absorption.md)
 - [Receitas Windows PowerShell](docs/windows-powershell-recipes.md)
 - [Catálogo de skills](catalog/skills.md)
 - [Catálogo de MCPs](catalog/mcps.md)
 - [Catálogo de marketplaces de plugins](catalog/plugin-marketplaces.md)
+- [Catálogo de templates de repositório](catalog/repository-templates.md)
 - [Catálogo de prompts e comandos](catalog/prompts-and-commands.md)
 - [Scan do ambiente](catalog/environment-scan.md)
 - [Checagem de cobertura](catalog/coverage-check.md)

@@ -1,6 +1,6 @@
 # Environment Scan
 
-Last checked: 2026-05-06.
+Last checked: 2026-05-07.
 
 This scan looked for Markdown files, skills, descriptions, orientation files,
 and reusable operating patterns across the local agent environment and
@@ -21,6 +21,7 @@ Checked categories:
 - `.agents/skills`, `.codex/skills`, and `.claude/skills`
 - DunderIA starter-kit skills
 - public export/runtime profile material already represented elsewhere
+- external agent-forward repository templates reviewed read-only
 
 Ignored or excluded:
 
@@ -45,6 +46,7 @@ Ignored or excluded:
 | contribution report skill | cataloged as reusable maintainer-report pattern | [`skills.md`](skills.md) |
 | documentation maintenance and plan-to-task skills | cataloged as project-specific references | [`skills.md`](skills.md) |
 | project-local UI development skill | cataloged as project-specific UI convention pattern | [`skills.md`](skills.md) |
+| `xklob/codex-repo-template` | absorbed selectively as repo starter guidance; unsafe runtime config rejected | [`repository-templates.md`](repository-templates.md), [`../docs/agent-forward-repository-template.md`](../docs/agent-forward-repository-template.md) |
 
 ## Useful Patterns To Preserve
 
@@ -58,6 +60,8 @@ Ignored or excluded:
 - Promote reusable skill ideas to public guidance, but leave private project
   procedures out.
 - Catalog rule packs as reference-only unless licensing and safety are reviewed.
+- Treat external repo templates as inspiration; copy only public-safe document
+  patterns after vetting configs, scripts and skill permissions.
 
 ## Candidate Backlog
 

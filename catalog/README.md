@@ -8,6 +8,7 @@ inventory of any private machine.
 | [`skills.md`](skills.md) | Complete public inventory of currently known Codex, Agents, and Superpowers skills. |
 | [`mcps.md`](mcps.md) | Public-safe catalog of MCP servers used or registered in the environment. |
 | [`plugin-marketplaces.md`](plugin-marketplaces.md) | Public-safe map of plugin marketplace material from the local runtime profile. |
+| [`repository-templates.md`](repository-templates.md) | Public-safe patterns for agent-forward repository starter documents and plans. |
 | [`prompts-and-commands.md`](prompts-and-commands.md) | Catalog of prompt, command, and agent patterns found in the profile. |
 | [`environment-scan.md`](environment-scan.md) | Public-safe summary of useful Markdown, skills, and guidance found across the local environment. |
 | [`caveman.md`](caveman.md) | Public notes for the `caveman` example skill. |

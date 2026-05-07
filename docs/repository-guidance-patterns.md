@@ -125,3 +125,28 @@ Public treatment:
 - catalog the pattern
 - do not copy private implementation details
 - extract a generic template only after review
+
+## Agent-Forward Repository Starter
+
+For a new repository that should be operated by humans and agents, use a small
+set of root documents instead of storing project truth only in chat history.
+
+Recommended starter:
+
+- `AGENTS.md`, for active agent rules
+- `PRODUCT.md`, for current user-visible truth
+- `ROADMAP.md`, for direction and non-priorities
+- `ARCHITECTURE.md`, for technical map and integration boundaries
+- `DESIGN.md`, for UI language and visual QA rules
+- `CODESTYLE.md`, for coding and testing conventions
+- `PLANS.md`, for executable plan format
+
+Use [`../templates/repository-guidance/`](../templates/repository-guidance/) as
+portable starter material.
+
+Security rule: never copy external runtime configs wholesale. Reject or rewrite
+configs that disable approvals, grant broad filesystem access, require secrets,
+or change sandbox/network policy without explicit local approval.
+
+More detail:
+[`agent-forward-repository-template.md`](agent-forward-repository-template.md).

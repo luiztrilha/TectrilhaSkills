@@ -3,8 +3,8 @@ param(
     [string]$CodexHome = (Join-Path $env:USERPROFILE ".codex"),
     [string]$AgentsHome = (Join-Path $env:USERPROFILE ".agents"),
     [string]$DunderiaRoot,
-    [string[]]$RepoRoots = @(),
-    [switch]$Json
+    [switch]$Json,
+    [string[]]$RepoRoots = @()
 )
 
 if (-not $TectrilhaSkillsRoot) {

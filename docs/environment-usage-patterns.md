@@ -55,3 +55,25 @@ for it, and keep the prompt contract precise.
 Keep this guide current whenever reusable skill knowledge changes in a public
 repo or in the global Codex/Agents/Superpowers environment. Promote the
 public-safe pattern, not the private runtime artifact.
+
+## TectrilhaSkills Environment Preview
+
+Use the preview script when an agent needs to check whether the local
+Codex/Agents/Superpowers environment and this public guide still line up:
+
+```powershell
+.\scripts\tectrilha-env-sync-preview.ps1
+```
+
+For automation or follow-up reporting:
+
+```powershell
+.\scripts\tectrilha-env-sync-preview.ps1 -Json
+```
+
+The script is read-only. It checks guide files, local instruction references,
+trusted workspace visibility, local checkouts, installed skill names, catalog
+coverage, and unsafe strings in templates. It never installs skills, rewrites
+runtime config, copies private state, or applies changes automatically.
+
+Apply any recommended change manually after review and user approval.

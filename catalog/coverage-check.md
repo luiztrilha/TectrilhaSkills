@@ -38,6 +38,7 @@ The broader environment scan is represented by:
 - [`../docs/repository-guidance-patterns.md`](../docs/repository-guidance-patterns.md), for reusable repo guidance patterns
 - [`repository-templates.md`](repository-templates.md), for public-safe starter template patterns
 - [`skills.md`](skills.md), for newly discovered skill families
+- [`../scripts/tectrilha-env-sync-preview.ps1`](../scripts/tectrilha-env-sync-preview.ps1), for read-only local alignment checks
 
 Included as source example:
 
@@ -106,3 +107,7 @@ Checked public-safe categories:
 The repo is a guide and catalog, not a mirror of every installed skill source.
 Before copying any full skill source, vet licensing, private paths, scripts,
 assets, and runtime assumptions.
+
+The environment sync preview reports differences only. It does not prove that a
+catalog entry is installable in every runtime and does not apply runtime
+changes automatically.

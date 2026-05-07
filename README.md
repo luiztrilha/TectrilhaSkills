@@ -191,6 +191,15 @@ ambiente for adicionada localmente:
    `excluded-private`.
 5. Rode checagens de formatação, segredos e paths antes de publicar.
 
+Para checar se o ambiente local e este guia ainda estão alinhados, rode:
+
+```powershell
+.\scripts\tectrilha-env-sync-preview.ps1
+```
+
+Essa checagem é apenas prévia: ela não instala, copia, sobrescreve ou aplica
+mudanças no runtime.
+
 ## Regra De Atualização
 
 Mantenha este repositório atualizado sempre que conhecimento reutilizável sobre

@@ -53,6 +53,13 @@ For new repo bootstrap or agent-forward repo organization:
 2. [`templates/repository-guidance/`](templates/repository-guidance/)
 3. [`catalog/repository-templates.md`](catalog/repository-templates.md)
 
+For checking whether the local environment still matches this public guide:
+
+1. [`docs/environment-usage-patterns.md`](docs/environment-usage-patterns.md)
+2. Run `.\scripts\tectrilha-env-sync-preview.ps1`
+3. Treat results as recommendations only; apply nothing without review and
+   user approval.
+
 ## Codex
 
 Use this repository as a public guidance source for:
@@ -154,3 +161,7 @@ When an agent adds new guidance:
 4. Keep examples small and public-safe.
 5. Run formatting and secret/path checks.
 6. Commit with a message that names the catalog or pattern updated.
+
+When an agent is asked to sync this guide with a local environment, start with
+the read-only preview script and report the differences. Do not auto-install
+skills, rewrite runtime config, or copy local state from the machine.

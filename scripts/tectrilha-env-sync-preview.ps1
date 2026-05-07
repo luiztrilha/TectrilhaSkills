@@ -63,18 +63,30 @@ function Get-GitStatusSafe {
     param([string]$Path)
 
     if (-not (Test-Path -LiteralPath (Join-Path $Path ".git"))) {
-        return $null
+        return [pscustomobject]@{
+            ok = $false
+            lines = @()
+        }
     }
 
     try {
-        $output = & git -C $Path status --short 2>$null
+        $output = @(& git -C $Path status --short 2>$null)
         if ($LASTEXITCODE -ne 0) {
-            return $null
+            return [pscustomobject]@{
+                ok = $false
+                lines = @()
+            }
         }
-        return @($output)
+        return [pscustomobject]@{
+            ok = $true
+            lines = $output
+        }
     }
     catch {
-        return $null
+        return [pscustomobject]@{
+            ok = $false
+            lines = @()
+        }
     }
 }
 
@@ -201,15 +213,15 @@ foreach ($repoRoot in $RepoRoots) {
         continue
     }
 
-    $status = Get-GitStatusSafe -Path $checkout
-    if ($null -eq $status) {
+    $statusResult = Get-GitStatusSafe -Path $checkout
+    if (-not $statusResult.ok) {
         Add-Finding -Area "checkout" -Status "info" -Summary "Checkout exists but git status was not available." -Details @($checkout)
     }
-    elseif ($status.Count -eq 0) {
+    elseif ($statusResult.lines.Count -eq 0) {
         Add-Finding -Area "checkout" -Status "ok" -Summary "Checkout is clean." -Details @($checkout)
     }
     else {
-        Add-Finding -Area "checkout" -Status "review" -Summary "Checkout has uncommitted changes." -Details @($checkout, ($status -join "; ")) -Recommendation "Review and commit or discard intentionally before using this checkout as the current public reference."
+        Add-Finding -Area "checkout" -Status "review" -Summary "Checkout has uncommitted changes." -Details @($checkout, ($statusResult.lines -join "; ")) -Recommendation "Review and commit or discard intentionally before using this checkout as the current public reference."
     }
 }
 

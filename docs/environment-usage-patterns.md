@@ -16,6 +16,10 @@ Use this order when instructions overlap:
 ## Skill Use
 
 - Use a skill when the task naturally matches its trigger.
+- When a runtime has an explicit skill-discovery workflow, invoke applicable
+  skills before acting instead of treating the catalog as passive reference.
+- Prefer process skills first when they change how work should be approached,
+  then use implementation skills.
 - Skip ceremony for trivial tasks.
 - Prefer narrow, task-specific skills over broad bundles.
 - Before publishing or installing an external skill, run a vetting pass.

@@ -1,6 +1,6 @@
 # Skill Inventory
 
-Last checked: 2026-05-06.
+Last checked: 2026-06-06.
 
 This inventory reflects the public-safe view of the local Codex, Agents, and
 Superpowers skill environment. It catalogs all known skills and marks whether
@@ -20,10 +20,10 @@ the source should be copied as a public example or kept as private/local-only.
 | Skill | Status | Public Guidance |
 |---|---|---|
 | `imagegen` | `reference-only` | Generate or edit bitmap visuals when the task needs AI-created raster assets. |
-| `openai-docs` | `reference-only` | Use official OpenAI documentation for OpenAI product/API guidance. |
+| `openai-docs` | `reference-only` | Use OpenAI developer docs first for product/API guidance, model selection, upgrades, and citations; fall back only to official OpenAI domains. |
 | `plugin-creator` | `reference-only` | Scaffold local Codex plugins and plugin metadata. |
 | `skill-creator` | `reference-only` | Design or update skills with clear trigger rules and workflows. |
-| `skill-installer` | `reference-only` | Install curated or repository-hosted skills into a local Codex runtime. |
+| `skill-installer` | `reference-only` | Install curated, experimental, or repository-hosted skills into a local Codex runtime and restart after install. |
 
 ## Codex Workflow Skills
 
@@ -41,10 +41,10 @@ the source should be copied as a public example or kept as private/local-only.
 | `screenshot` | `cataloged` | Capture desktop or system screenshots when browser-level capture is not enough. |
 | `security-best-practices` | `cataloged` | Review language/framework security practices for supported stacks. |
 | `self-improvement-lite` | `cataloged` | Decide whether durable learnings belong in canonical local files. |
-| `skill-vetter` | `cataloged` | Vet external skills before installation or publication. |
+| `skill-vetter` | `cataloged` | Vet external skills for source quality, red flags, permission scope, and install risk before trusting them. |
 | `sql-convenios` | `excluded-private` | Private database workflow helper. Do not publish or generalize its source. |
 | `systematic-debugging-lite` | `cataloged` | Root-cause debugging workflow for regressions and uncertain failures. |
-| `verification-before-close` | `cataloged` | Final evidence check before claiming work is complete. |
+| `verification-before-close` | `cataloged` | Final evidence check that separates verified results, skipped validation, and blocked checks before closure. |
 | `xlsx` | `cataloged` | Use for Excel, CSV, formulas, formatting, dates, or workbook fidelity. |
 
 ## Agents Design Skills
@@ -86,7 +86,7 @@ the source should be copied as a public example or kept as private/local-only.
 | `systematic-debugging` | `cataloged` | Investigate bugs by proving cause before fixing. |
 | `test-driven-development` | `cataloged` | Write failing tests before implementation when applying TDD. |
 | `using-git-worktrees` | `cataloged` | Use isolated worktrees for feature work. |
-| `using-superpowers` | `cataloged` | Establish skill discovery and invocation workflow. |
+| `using-superpowers` | `cataloged` | Establish skill discovery discipline, process-skill ordering, and mandatory skill invocation before action. |
 | `verification-before-completion` | `cataloged` | Verify evidence before claiming completion. |
 | `writing-plans` | `cataloged` | Produce implementation plans before touching code. |
 | `writing-skills` | `cataloged` | Create or edit skills and verify them before deployment. |

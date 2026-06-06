@@ -1,6 +1,6 @@
 # Environment Scan
 
-Last checked: 2026-05-07.
+Last checked: 2026-06-06.
 
 This scan looked for Markdown files, skills, descriptions, orientation files,
 and reusable operating patterns across the local agent environment and

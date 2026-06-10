@@ -78,6 +78,7 @@ Arquivos principais:
 - [`catalog/plugin-marketplaces.md`](catalog/plugin-marketplaces.md)
 - [`catalog/prompts-and-commands.md`](catalog/prompts-and-commands.md)
 - [`docs/plugin-development-patterns.md`](docs/plugin-development-patterns.md)
+- [`docs/goal-oriented-agent-workflows.md`](docs/goal-oriented-agent-workflows.md)
 
 ## Templates De Repositório Agent-Forward
 
@@ -140,6 +141,7 @@ O guia captura padrões operacionais reutilizáveis:
 Arquivos principais:
 
 - [`docs/environment-usage-patterns.md`](docs/environment-usage-patterns.md)
+- [`docs/goal-oriented-agent-workflows.md`](docs/goal-oriented-agent-workflows.md)
 - [`docs/runtime-profile-boundaries.md`](docs/runtime-profile-boundaries.md)
 - [`docs/windows-powershell-recipes.md`](docs/windows-powershell-recipes.md)
 
@@ -216,6 +218,7 @@ privado de runtime.
 - [Vetting de skills](docs/vetting-skills.md)
 - [Codex, Agents e Superpowers](docs/codex-agents-superpowers.md)
 - [Padrões de uso do ambiente](docs/environment-usage-patterns.md)
+- [Workflows orientados a objetivos](docs/goal-oriented-agent-workflows.md)
 - [Limites de runtime profile](docs/runtime-profile-boundaries.md)
 - [Padrões de uso de MCP](docs/mcp-usage-patterns.md)
 - [Padrões de desenvolvimento de plugins](docs/plugin-development-patterns.md)

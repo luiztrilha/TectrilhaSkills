@@ -1,6 +1,6 @@
 # Prompt And Command Catalog
 
-Last checked: 2026-05-06.
+Last checked: 2026-06-10.
 
 This catalog summarizes prompt, command, and agent-orientation material found in
 the public local-runtime-profile snapshot.
@@ -57,6 +57,12 @@ the public local-runtime-profile snapshot.
 | code simplifier | `cataloged` | Complexity reduction and refactoring suggestions. |
 | plugin validator | `cataloged` | Plugin quality and structure validation. |
 | skill reviewer | `cataloged` | Skill quality and safety review. |
+
+## Goal-Oriented Workflow References
+
+| Workflow Source | Treatment | Public Use |
+|---|---|---|
+| `jumbo.cli` | `reference-only` | Reference for explicit goal lifecycles, refine/implement/review/codify phases, bounded context packets, and low-conflict parallel execution. |
 
 ## Absorption Rule
 

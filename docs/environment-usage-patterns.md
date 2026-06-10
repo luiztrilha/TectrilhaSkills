@@ -25,6 +25,17 @@ Use this order when instructions overlap:
 - Before publishing or installing an external skill, run a vetting pass.
 - Keep repo-local skill overrides only when they truly change behavior.
 
+## Goal-Oriented Execution
+
+- Prefer explicit goals over open-ended agent sessions when the work spans
+  multiple phases, handoffs, or validation gates.
+- Keep goal criteria testable and bounded before implementation starts.
+- Use small context packets at workflow transitions instead of loading broad
+  project state by default.
+- Treat review and codification as distinct phases when the work is important
+  enough to preserve durable lessons.
+- See `docs/goal-oriented-agent-workflows.md` for the full public-safe pattern.
+
 ## Evidence Before Closure
 
 Before claiming a task is complete:

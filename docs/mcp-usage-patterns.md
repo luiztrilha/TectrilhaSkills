@@ -12,7 +12,7 @@ Public docs can show a sanitized shape:
   "mcpServers": {
     "github": {
       "command": "powershell.exe",
-      "args": ["-NoProfile", "-File", "${workspaceFolder}/scripts/launch_github_mcp.ps1"]
+      "args": ["-NoProfile", "-File", "${workspaceFolder}/scripts/mcp/launch_github_mcp.ps1"]
     },
     "filesystem": {
       "command": "npx",
@@ -35,6 +35,23 @@ A safe launcher should:
 - fail closed when credentials or provider settings are missing
 - avoid printing secrets
 - pin package versions when stability matters
+- live in a neutral workspace layer such as `scripts/mcp/` instead of inside an
+  app runtime repo when the launcher is shared infrastructure
+
+## Neutral Workspace Layer
+
+If MCP launchers are part of the user's general agent environment rather than a
+single product, keep them in a neutral workspace path such as:
+
+```text
+scripts/mcp/launch_github_mcp.ps1
+scripts/mcp/launch_playwright_mcp.ps1
+scripts/mcp/launch_brave_mcp.ps1
+config/codex/workspace-mcp-settings.json
+```
+
+This reduces accidental coupling between the user's active runtime and an
+unrelated product repository.
 
 ## Filesystem MCP
 
@@ -81,6 +98,10 @@ Write operations should remain explicit and scoped.
 Gate web-search MCPs by provider setting and credential availability. If the
 provider is not selected, the launcher should fail closed instead of silently
 falling back to another source.
+
+If configuration is file-backed, prefer a small dedicated config file or
+explicit environment variables over reading a product-specific runtime state by
+default.
 
 ## Memory MCP
 
